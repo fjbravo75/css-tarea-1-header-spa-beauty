@@ -90,6 +90,11 @@ img {
   line-height: 54px;
   font-weight: 600;
   letter-spacing: 0;
+  transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0.8;
 }
 
 .logo span:first-child {
@@ -123,9 +128,12 @@ img {
   transition: color 0.2s ease;
 }
 
-.main-nav a:hover,
-.header-actions a:hover {
+.main-nav a:hover {
   color: var(--color-mint);
+}
+
+.header-actions__signin:hover {
+  color: #ffffff;
 }
 
 .main-nav__more {
@@ -151,6 +159,13 @@ img {
   justify-content: center;
   width: 32px;
   height: 32px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.header-actions__icon:hover {
+  background: #e7f4f1;
+  transform: translateY(-2px);
 }
 
 .header-actions__signin {
@@ -179,9 +194,15 @@ img {
 }
 
 .button:hover {
-  color: #ffffff;
-  background: #1c3455;
-  transform: translateY(-1px);
+  color: var(--color-blue);
+  background: var(--color-mint);
+  transform: translateY(-2px);
+}
+
+.header-actions .button:hover {
+  color: var(--color-blue);
+  background: #ffffff;
+  box-shadow: 0 16px 32px rgba(38, 64, 101, 0.18);
 }
 
 .button--small {
@@ -229,6 +250,11 @@ img {
   font-size: 18px;
   line-height: 27px;
   font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.video-link:hover {
+  color: var(--color-mint);
 }
 
 .video-link__icon {
@@ -240,6 +266,13 @@ img {
   border-radius: 50%;
   background: #ffffff;
   box-shadow: 0 28px 50px rgba(38, 64, 101, 0.12);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.video-link:hover .video-link__icon {
+  background: var(--color-mint);
+  box-shadow: 0 28px 50px rgba(38, 64, 101, 0.2);
+  transform: translateY(-2px);
 }
 
 .video-link__icon img {
@@ -259,16 +292,12 @@ img {
 }
 
 .testimonials {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 5;
+  position: static;
 }
 
 .testimonial {
   position: absolute;
+  z-index: 5;
   width: 405px;
   min-height: 247px;
   padding: 55px 24px 22px;
